@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)https://www.pythonanywhere.com/user/UCMSocialMediaApp/files/home/UCMSocialMediaApp/flask/templates/classes.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+
+    <style>
+        html, body {
+            background-color:midnightblue;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: "American Typewriter", serif;
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+
+        .page{
+            background-color: midnightblue;
+            color: white;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .header{
+            background-color: goldenrod;
+            color: white;
+            font-size: 40px;
+            height: 50px;
+            width: 100%;
+            margin-bottom: 80px;
+        }
+
+        button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        h{
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        table, td{
+            border:3px solid goldenrod;
+            border-collapse: collapse;
+        }
+
+        table{
+            width: 460px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tab{
+            margin-bottom: 25px;
+        }
+
+        th{
+            width: 25%;
+        }
+
+        input{
+            width: 25%;
+            border:0;
+        }
+
+        .split{
+            background-color: goldenrod;
+            color: white;
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            bottom:0;
+            left:0;
+            z-index: 9999;
+        }
+
+        .split button{
+            border-radius: 10px;
+            background-color: dodgerblue;
+            color: white;
+            border-color: royalblue;
+            padding: 10px 50px;
+            font-size: 15px;
+            margin: 10px;
+        }
+        .split button:hover{
+            background-color: coral;
+            border-color: lightcoral;
+        }
+
+</style>
+<style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+</style><style>
+    @font-face {
+        font-family: 'SegoeUI_online_security'; 
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/segoe-ui.woff);
+    }
+
+    @font-face {
+        font-family: 'SegoeUI_bold_online_security'; 
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/segoe-ui-bold.woff);
+    }
+</style><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+</style><style>.av-extension{--dark-blue-background: #183360;--active-blue-font-color: #183360;--modal-header-darkblue-background: #05153f;--grey-font-color: #93a0b5;--background-color: #f1f4f8;--foreground-color: #ffffff;--tertiary-color: #05153f;--primary-font-color: #183360;--green-font-color: #04d289;--red-font-color: #ff3b30;--purple-font-color: #6726ff;--orange-color: #ff8f11;--default-font-size: 18px;--modal-header-background: #f2f2f2;--hover-orange-color: #d97a0e}.av-extension h1{font-family:'SegoeUI_bold_online_security';font-size:50px;font-weight:700;line-height:66.5px}.av-extension h2{font-size:30px;padding:0px;margin:5px 0px;margin-top:0px}.av-extension h3{font-size:20px;font-weight:normal;white-space:pre-line}.av-extension p{padding:0px;margin:5px 0px}.av-extension a{text-decoration:none}.av-extension .flex{display:flex}.av-extension .grid{display:grid}.av-extension .fwrap{flex-wrap:wrap}.av-extension .ait{align-items:top}.av-extension .aic{align-items:center}.av-extension .jcl{justify-content:left}.av-extension .jcc{justify-content:center}.av-extension .jcr{justify-content:right}.av-extension .tac{text-align:center}.av-extension .w100{width:100%}.av-extension .sb{font-weight:600}.av-extension .borderButtonColor{color:var(--orange-color);border:3px solid var(--orange-color)}.av-extension .paddinglr{padding:100px 50px}.av-extension .redColor{color:var(--red-font-color);fill:var(--red-font-color)}.av-extension .greenColor{color:var(--green-font-color);fill:var(--green-font-color)}.av-extension .purpleColor{color:var(--purple-font-color)}.av-extension .orangeColor{color:var(--orange-color)}.av-extension .content{color:var(--primary-font-color);margin:auto;max-width:85%;padding-top:30px;padding-bottom:20px}.av-extension .sectionContent{margin-top:80px;margin-bottom:40px;font-size:22px;color:var(--primary-font-color)}.av-extension .btnAction{min-width:170px;padding:10px 25px;color:var(--orange-color);border:2.5px solid var(--orange-color);border-radius:39px;font-weight:600;background-color:transparent}.av-extension .btnAction:hover{background-color:var(--orange-color);color:white}.av-extension .btnDwm{background:linear-gradient(#fff, #fff) padding-box,linear-gradient(to right, #8526ff, #2a26ff) border-box;border:2.5px solid transparent;color:#7644ff}.av-extension .btnDwm:hover{background:linear-gradient(to right, #8526ff, #2a26ff) padding-box,linear-gradient(to right, #8526ff, #2a26ff) border-box;border:2.5px solid transparent}.av-extension .btnBuy{display:flex;align-items:center;justify-content:center;gap:10px;min-width:170px;padding:15px 40px;color:#fff;border-radius:39px;font-weight:600;background-color:var(--tertiary-color);border:none;cursor:pointer}.av-extension .btnBuy:hover{background-color:#0f3cb0}.av-extension .btnBuy:active{background-color:#0f3391}.av-extension .btnBuyOrange{display:flex;align-items:center;justify-content:center;gap:10px;min-width:170px;padding:15px 40px;color:#fff;border-radius:39px;font-weight:600;background-color:var(--orange-color);border:none;cursor:pointer}.av-extension .btnBuyOrange:hover{background-color:#ffa846}.av-extension .btnBuyOrange:active{background-color:#d97a0e}.av-extension .sectionTitle{font-weight:bold;font-size:20px;margin-bottom:25px}.av-extension .sectionTitle img{margin-left:5px;margin-right:13px}.av-extension .fullHeadContent{height:400px;background:var(--tertiary-color);box-shadow:-3px 0px 3px rgba(0,0,0,0.1);border-radius:0px 0px 22px 22px;color:var(--foreground-color)}.av-extension .fullHeadContent img{width:442px}.av-extension .fullHeadContent p{margin:10px}.av-extension .spinner{width:120px;height:120px}@media screen and (min-width: 1500px){.av-extension .content{max-width:70%}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+</style><style>
+    @font-face {
+        font-family: 'SegoeUI_online_security'; 
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/segoe-ui.woff);
+    }
+
+    @font-face {
+        font-family: 'SegoeUI_bold_online_security'; 
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/segoe-ui-bold.woff);
+    }
+</style><style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+</style></head>
+
+<body>
+    <div class="page">
+    <div class="header">
+        <h>Classes on Campus</h>
+    </div>
+
+    <table>
+        <tbody><tr>
+            <td>
+                <h3>CSE 015:</h3>
+                <h3>Discrete Mathematics</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=20&amp;coid=49519"><img src="./Classes_files/614832_e3b0_4.jpg" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 015: Discrete Mathematics" readonly="" fdprocessedid="n4fpru"> likes</th>
+                        <th><button onclick="like(&#39;CSE 015: Discrete Mathematics&#39;, &#39;{{username}}&#39;)" fdprocessedid="tchs99">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 015: Discrete Mathematics&#39;, &#39;{{username}}&#39;)" fdprocessedid="kf7qq">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+015:+Discrete+Mathematics&#39;" fdprocessedid="rc4y4ei">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <h3>CSE 022:</h3>
+                <h3>Introduction to Programming</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=20&amp;coid=50100"><img src="./Classes_files/ProgrammingIllustration.png" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 022: Introduction to Programming" readonly="" fdprocessedid="t68tl"> likes</th>
+                        <th><button onclick="like(&#39;CSE 022: Introduction to Programming&#39;, &#39;{{username}}&#39;)" fdprocessedid="g1dv">👍</button></th>
+                        <th><button onclick="like(&#39;CSE 022: Introduction to Programming&#39;, &#39;{{username}}&#39;)" fdprocessedid="t7a5pd">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+022:+Introduction+to+Programming&#39;" fdprocessedid="x43ru">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <h3>CSE 024:</h3>
+                <h3>Advanced Programming</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=20&amp;coid=50104"><img src="./Classes_files/0_SPjH6EGSjLcMPv8Q.jpg" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 024: Advanced Programming" readonly="" fdprocessedid="wvjg1a"> likes</th>
+                        <th><button onclick="like(&#39;CSE 024: Advanced Programming&#39;, &#39;{{username}}&#39;)" fdprocessedid="ey041s">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 024: Advanced Programming&#39;, &#39;{{username}}&#39;)" fdprocessedid="g78mac">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+024:+Advanced+Programming&#39;" fdprocessedid="p9sgu">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>CSE 030:</h3>
+                <h3>Data Structures</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=20&amp;coid=48040"><img src="./Classes_files/hq720.jpg" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 030: Data Structures" readonly="" fdprocessedid="yyij5"> likes</th>
+                        <th><button onclick="like(&#39;CSE 030: Data Structures&#39;, &#39;{{username}}&#39;)" fdprocessedid="3lq248">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 030: Data Structures&#39;, &#39;{{username}}&#39;)" fdprocessedid="p42pi7">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+030:+Data+Structures&#39;" fdprocessedid="o90w1s">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <h3>CSE 031:</h3>
+                <h3>Computer Organization</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=16&amp;coid=39179"><img src="./Classes_files/cs_computerorganizationsystems_cs107.jpg" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 031: Computer Organization" readonly="" fdprocessedid="22d72m"> likes</th>
+                        <th><button onclick="like(&#39;CSE 031: Computer Organization&#39;, &#39;{{username}}&#39;)" fdprocessedid="ylmbhq">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 031: Computer Organization&#39;, &#39;{{username}}&#39;)" fdprocessedid="3svs4">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+031:+Computer+Organization&#39;" fdprocessedid="mdxikk">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <h3>CSE 100:</h3>
+                <h3>Algorithm Design and Analysis</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=16&amp;coid=39183"><img src="./Classes_files/what-is-an-algorithm.png" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 100: Algorithm Design and Analysis" readonly="" fdprocessedid="ob69"> likes</th>
+                        <th><button onclick="like(&#39;CSE 100: Algorithm Design and Analysis&#39;, &#39;{{username}}&#39;)" fdprocessedid="him0qg">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 100: Algorithm Design and Analysis&#39;, &#39;{{username}}&#39;)" fdprocessedid="07cz3n">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+100:+Algorithm+Design+and+Analysis&#39;" fdprocessedid="5bmllc">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>CSE 111:</h3>
+                <h3>Database Systems</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=23&amp;coid=64699"><img src="./Classes_files/0712-Bad_Practices_in_Database_Design_-_Are_You_Making_These_Mistakes_Dan_Social-754bc73011e057dc76e55a44a954e0c3.png" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 111: Database Systems" readonly="" fdprocessedid="25h0vq"> likes</th>
+                        <th><button onclick="like(&#39;CSE 111: Database Systems&#39;, &#39;{{username}}&#39;)" fdprocessedid="kwuhje">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 111: Database Systems&#39;, &#39;{{username}}&#39;)" fdprocessedid="8z4png">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+111:+Database+Systems&#39;" fdprocessedid="o4xnac">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <h3>CSE 120:</h3>
+                <h3>Software Engineering</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=23&amp;coid=64701"><img src="./Classes_files/wp7039147.png" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 120: Software Engineering" readonly="" fdprocessedid="boex4k"> likes</th>
+                        <th><button onclick="like(&#39;CSE 120: Software Engineering&#39;, &#39;{{username}}&#39;)" fdprocessedid="9sk6d2">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 120: Software Engineering&#39;, &#39;{{username}}&#39;)" fdprocessedid="vmhlvs">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+120:+Software+Engineering&#39;" fdprocessedid="hp5ra">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <h3>CSE 140:</h3>
+                <h3>Computer Architecture</h3>
+                <a href="https://catalog.ucmerced.edu/preview_course_nopop.php?catoid=23&amp;coid=64702"><img src="./Classes_files/Welcome.jpg" width="460" height="345"></a>
+                <table>
+                    <tbody><tr>
+                        <th><input type="text" id="CSE 140: Computer Architecture" readonly="" fdprocessedid="o20wh"> likes</th>
+                        <th><button onclick="like(&#39;CSE 140: Computer Architecture&#39;, &#39;{{username}}&#39;)" fdprocessedid="jxkdk7">👍</button></th>
+                        <th><button onclick="dislike(&#39;CSE 140: Computer Architecture&#39;, &#39;{{username}}&#39;)" fdprocessedid="50k7ck">👎</button></th>
+                        <th><button onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/comments/{{username}}/CSE+140:+Computer+Architecture&#39;" fdprocessedid="zipww">✍</button></th>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+
+    <div class="tab">raah</div>
+
+    <form class="split">
+        <button type="button" onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/mainpage/{{username}}&#39;" fdprocessedid="cc64ns">Main Page</button>
+        <button type="button" onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/places/{{username}}&#39;" fdprocessedid="9pyywu4">Places Page</button>
+        <button type="button" onclick="window.location.href = &#39;https://ucmsocialmediaapp.pythonanywhere.com/sports/{{username}}&#39;" fdprocessedid="oa4mus">Sports Page</button>
+        <span><a href="https://ucmsocialmediaapp.pythonanywhere.com/">Sign Out</a></span>
+    </form>
+    </div>
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
